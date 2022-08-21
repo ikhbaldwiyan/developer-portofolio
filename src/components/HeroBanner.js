@@ -1,5 +1,7 @@
-import React from 'react'
-import Profile from '../assets/img/profile.png'
+import React from 'react';
+import Profile from '../assets/img/profile.png';
+import { MdPermContactCalendar } from 'react-icons/md';
+import { AiFillGithub } from 'react-icons/ai';
 
 function HeroBanner() {
 
@@ -18,7 +20,7 @@ function HeroBanner() {
 
   return (
     <section id="home" className='pt-36 lg:pt-10'>
-      <div className="container">
+      <div className="container lg:mt-10">
         <div className="flex flex-wrap">
           <div className="w-full self-center px-4 lg:w-1/2">
             <h1 className='text-base text-1xl font-bold text-primary'>
@@ -31,15 +33,18 @@ function HeroBanner() {
               Front End Developer & <span className="text-black">Blogger</span>
             </span>
             <p className="font-medium text-secondary py-8">
-              Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer over 2 years with a demonstrated history of working in the information technology and IT services industry
+              Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer <br />
+              over 2 years with a demonstrated history of working in the information technology and IT services industry
             </p>
 
-            <a href='#' className='text-base font-semibold text-white bg-primary py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5'>
-              Contact Me
-            </a>
-            <a href='#' className='text-base font-semibold text-white bg-black py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out'>
-              Github
-            </a>
+            <div className="mt-8">
+              <a href='#' className='text-base font-semibold text-white bg-primary py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline'>
+                <MdPermContactCalendar className='mb-1 inline' size={25} /> Contact Me
+              </a>
+              <a href='https://github.com/ikhbaldwiyan' className='text-base font-semibold text-white bg-black py-4 px-8 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
+                <AiFillGithub className='mb-1 inline' size={25} /> GitHub
+              </a>
+            </div>
           </div>
           <ProfileImage />
         </div>

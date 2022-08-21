@@ -60,8 +60,8 @@ function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-7">
-            <a href="#home" className='font-bold text-white block py-6 text-3xl'>
-              Portofolio
+            <a href="#home" className='font-bold text-stone-50 block py-6 text-3xl'>
+              My Profile
             </a>
           </div>
           <div className='flex items-center px-7'>
