@@ -13,16 +13,12 @@ function Navbar() {
       link: '#home'
     },
     {
-      name: 'Blog',
-      link: '#blog'
-    },
-    {
-      name: 'Client',
-      link: '#client'
-    },
-    {
       name: 'Projects',
       link: '#project'
+    },
+    {
+      name: 'Blog',
+      link: '#blog'
     },
     {
       name: 'About',
@@ -56,12 +52,12 @@ function Navbar() {
   )
 
   return (
-    <header className='bg-cyan-600 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-lg backdrop-blur-md'>
+    <header className='bg-gradient-to-l from-primary to-blue-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-lg backdrop-blur-md'>
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-7">
             <a href="#home" className='font-bold text-stone-50 block py-6 text-3xl'>
-              My Profile
+              Developer Profile
             </a>
           </div>
           <div className='flex items-center px-7'>
