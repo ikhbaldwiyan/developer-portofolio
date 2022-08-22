@@ -71,8 +71,8 @@ function Portofolio() {
       img: SMT,
       title: 'Smooth Pizza',
       desc: 'Website Point of sale for management pizza restaurant, This website made at my high school last project',
+      github: 'https://github.com/Inzoid/smooth',
       technology: <TechStackPHP />
-
     },
     {
       img: DLR,
@@ -83,16 +83,16 @@ function Portofolio() {
   ]  
 
   return (
-    <section id='project' className='pt-22 pb-16 bg-slate-100 rounded-lg my-10 mx-4'>
+    <section id='project' className='pt-22 pb-16 bg-slate-100 rounded-xl my-10 mx-4'>
       <div className="container">
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto text-center mb-15">
             <h4 className='font-bold text-2xl text-primary py-8 uppercase'>Portfolio</h4>
-            <h2 className='text-black font-semibold text-3xl mb-4 uppercase'>
-              <FaLaptopCode size={40} className='inline mr-2'/> My Projects <FaLaptopCode size={40} className='inline ml-2'/> 
+            <h2 className='text-black font-bold text-xl lg:text-3xl mb-4 uppercase sm:text-md'>
+              <FaLaptopCode size={35} className='inline mr-2 mb-1'/> My Projects <FaLaptopCode size={35} className='inline ml-2 mb-1'/> 
             </h2>
             <p className="font-medium text-md text-secondary">
-              Here my list project that i been working
+              Here is a list of projects I have worked on
             </p>
           </div>
         </div>
@@ -109,16 +109,19 @@ function Portofolio() {
 
               {item.technology}
 
-              <p className="text-secondary font-medium mb-10">
+              <p className="text-secondary font-medium">
                 {item.desc}
               </p>
 
-              <a href={item.link} className={`text-base font-semibold text-white bg-gradient-to-r from-primary to-sky-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10 ${!item.link ? 'opacity-60 cursor-not-allowed' : ''} `} target="_blank">
-                <TbZoomCode className='mb-1 inline' size={25} /> Website
-              </a>
-              <a href={item.github} className={`text-base font-semibold text-white bg-black py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${!item.link ? 'opacity-60 cursor-not-allowed' : ''}`} target="_blank">
-                <AiFillGithub className='mb-1 inline mr-1' size={25} /> GitHub
-              </a>
+              <div className="flex space-y-10 justify-center">
+                <a href={item.link} className={`text-base font-semibold text-white bg-gradient-to-r from-primary to-sky-500  py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10 ${!item.link ? 'opacity-60 cursor-not-allowed' : ''} `} target="_blank">
+                  <TbZoomCode className='mb-1 inline' size={25} /> Website
+                </a>
+                <a href={item.github} className={`text-base font-semibold text-white bg-black py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${!item.github ? 'opacity-60 cursor-not-allowed' : ''}`} target="_blank">
+                  <AiFillGithub className='mb-1 inline mr-1' size={25} /> GitHub
+                </a>
+              </div>
+
             </div>
           ))}
         </div>
