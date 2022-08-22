@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
+import { AiFillHome } from 'react-icons/ai';
+import { BsInfoCircleFill } from 'react-icons/bs';
+import { FaLaptopCode } from 'react-icons/fa';
+import { MdArticle, MdPermContactCalendar } from 'react-icons/md';
+
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
@@ -14,26 +19,31 @@ function Navbar() {
       name: 'Home',
       pathname: '/',
       hash: '#',
+      icon: <AiFillHome className="inline mt-1 mr-1" />
     },
     {
       name: 'Blog',
       pathname: '/blog',
       hash: '#',
+      icon: <MdArticle className="inline mt-1 mr-1" />
     },
     {
       name: 'Projects',
       pathname: '/',
       hash: '#project',
-    },
-    {
-      name: 'About',
-      pathname: '/',
-      hash: '#about',
+      icon: <FaLaptopCode className='inline mt-1 mr-1'/>
     },
     {
       name: 'Contact',
       pathname: '/',
       hash: '#about',
+      icon: <MdPermContactCalendar className='inline mt-1 mr-1' />
+    },
+    {
+      name: 'About',
+      pathname: '/',
+      hash: '#about',
+      icon: <BsInfoCircleFill className='inline mt-1 mr-1' />
     },
   ]
 
@@ -46,7 +56,9 @@ function Navbar() {
               to={`${item.pathname}${item.hash}`}
               smooth
             >
-              <a href={item.link} className='font-semibold text-black py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>{item.name}</a>
+              <a className='font-semibold text-black py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>
+                {item.icon} {item.name}
+              </a>
             </NavHashLink>
           </li>
         ))}
@@ -67,7 +79,7 @@ function Navbar() {
     <header className='bg-gradient-to-l from-primary to-blue-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-xl backdrop-blur-md'>
       <div className="container">
         <div className="flex items-center justify-between relative">
-          <div>
+          <div className="px-2">
             <Link to="/">
               <a className='font-bold text-stone-50 block py-6 text-3xl'>
                 Developer Profile

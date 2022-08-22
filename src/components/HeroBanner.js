@@ -9,17 +9,27 @@ function HeroBanner() {
     <div className="w-full self-end px-4 lg:w-1/2">
       <div className="relative mt-10 lg:right-0 lg:mt-9">
         <img src={Profile} alt="Sandhika Galih" className="relative z-10 mx-auto max-w-full" />
-        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              fill="#06b6d4" 
-              d="M47.5,-55.6C61.7,-44.7,73.5,-29.9,76.3,-13.6C79,2.8,72.8,20.6,63.4,36.3C53.9,52,41.4,65.6,26.1,70.7C10.8,75.8,-7.2,72.5,-25.6,67.2C-44,61.8,-62.8,54.5,-70.4,40.9C-77.9,27.3,-74.2,7.4,-71,-12.9C-67.9,-33.2,-65.3,-53.9,-53.5,-65.2C-41.8,-76.5,-20.9,-78.3,-2.1,-75.8C16.7,-73.3,33.3,-66.4,47.5,-55.6Z" 
-              transform="translate(100 100) scale(1.0)"
-            />
-          </svg>
-        </span>
+        <SVG />
       </div>
     </div>
+  )
+
+  const SVG = () => (
+    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+      <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradient">
+            <stop offset="20%" stop-color="#3b82f6" />
+            <stop offset="80%" stop-color="#06b6d4" />
+          </linearGradient>
+        </defs>
+        <path 
+          fill="url(#gradient)" 
+          d="M47.5,-55.6C61.7,-44.7,73.5,-29.9,76.3,-13.6C79,2.8,72.8,20.6,63.4,36.3C53.9,52,41.4,65.6,26.1,70.7C10.8,75.8,-7.2,72.5,-25.6,67.2C-44,61.8,-62.8,54.5,-70.4,40.9C-77.9,27.3,-74.2,7.4,-71,-12.9C-67.9,-33.2,-65.3,-53.9,-53.5,-65.2C-41.8,-76.5,-20.9,-78.3,-2.1,-75.8C16.7,-73.3,33.3,-66.4,47.5,-55.6Z" 
+          transform="translate(100 100) scale(1.0)"
+        />
+      </svg>
+    </span>
   )
 
   return (
@@ -42,7 +52,7 @@ function HeroBanner() {
             </p>
 
             <div className="mt-8">
-              <a href='#' className='text-base font-semibold text-white bg-primary py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline'>
+              <a href='#' className='text-base font-semibold text-white bg-gradient-to-r from-primary to-blue-500 py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline'>
                 <MdPermContactCalendar className='mb-1 inline' size={25} /> Contact Me
               </a>
               <a href='https://github.com/ikhbaldwiyan' className='text-base font-semibold text-white bg-black py-4 px-8 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">

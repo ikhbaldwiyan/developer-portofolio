@@ -58,12 +58,12 @@ function Portofolio() {
   )
 
   return (
-    <section id='project' className='pt-22 pb-16 bg-slate-100 rounded-lg my-10'>
+    <section id='project' className='pt-22 pb-16 bg-slate-100 rounded-lg my-10 mx-4'>
       <div className="container">
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto text-center mb-15">
             <h4 className='font-bold text-2xl text-primary py-8 uppercase'>Portfolio</h4>
-            <h2 className='text-black font-semibold text-3xl mb-4'>
+            <h2 className='text-black font-semibold text-3xl mb-4 uppercase'>
               <FaLaptopCode size={40} className='inline mr-2'/> My Projects <FaLaptopCode size={40} className='inline ml-2'/> 
             </h2>
             <p className="font-medium text-md text-secondary">
@@ -90,7 +90,7 @@ function Portofolio() {
 
               {item.link && (
                 <>
-                  <a href={item.link} className='text-base font-semibold text-white bg-gradient-to-l from-primary to-blue-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10' target="_blank">
+                  <a href={item.link} className='text-base font-semibold text-white bg-gradient-to-r from-primary to-blue-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10' target="_blank">
                     <TbZoomCode className='mb-1 inline' size={25} /> Website
                   </a>
                   <a href={item.github} className='text-base font-semibold text-white bg-black py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
