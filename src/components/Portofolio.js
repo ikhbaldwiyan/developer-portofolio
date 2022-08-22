@@ -90,7 +90,7 @@ function Portofolio() {
 
               {item.link && (
                 <>
-                  <a href={item.link} className='text-base font-semibold text-white bg-slate-500 py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10' target="_blank">
+                  <a href={item.link} className='text-base font-semibold text-white bg-gradient-to-l from-primary to-blue-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10' target="_blank">
                     <TbZoomCode className='mb-1 inline' size={25} /> Website
                   </a>
                   <a href={item.github} className='text-base font-semibold text-white bg-black py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
