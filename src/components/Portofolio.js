@@ -29,19 +29,19 @@ function Portofolio() {
     {
       img: SMT,
       title: 'Smooth Pizza',
-      desc: 'Website Point of sale for management restaurant'
+      desc: 'Website Point of sale for management pizza restaurant, This website made at my high school last project'
     },
     {
       img: DLR,
       title: 'Jack Dealer',
-      desc: 'Website dealer for buy or sell cars'
+      desc: 'Website dealer for buy or sell cars, you can buy many type of branding cars in this website'
     },
   ]
 
   const TechStack = () => (
     <div>
       <div className="flex justify-center py-3 space-x-3">
-        <a className='text-base font-semibold text-white bg-cyan-400 py-2 px-3 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
+        <a className='text-base font-semibold text-white bg-sky-500 py-2 px-3 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
           <FaReact className='mb-1 inline' size={20} />
         </a>
         <a className='text-base font-semibold text-white bg-indigo-700 py-2 px-3 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
@@ -88,16 +88,13 @@ function Portofolio() {
                 {item.desc}
               </p>
 
-              {item.link && (
-                <>
-                  <a href={item.link} className='text-base font-semibold text-white bg-gradient-to-r from-primary to-blue-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10' target="_blank">
-                    <TbZoomCode className='mb-1 inline' size={25} /> Website
-                  </a>
-                  <a href={item.github} className='text-base font-semibold text-white bg-black py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
-                    <AiFillGithub className='mb-1 inline mr-1' size={25} /> GitHub
-                  </a>
-                </>
-              )}
+              <a href={item.link} className={`text-base font-semibold text-white bg-gradient-to-r from-primary to-sky-500  py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10 ${!item.link ? 'opacity-60 cursor-not-allowed' : ''} `} target="_blank">
+                <TbZoomCode className='mb-1 inline' size={25} /> Website
+              </a>
+              <a href={item.github} className={`text-base font-semibold text-white bg-black py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${!item.link ? 'opacity-60 cursor-not-allowed' : ''}`} target="_blank">
+                <AiFillGithub className='mb-1 inline mr-1' size={25} /> GitHub
+              </a>
+            
             </div>
           ))}
         </div>

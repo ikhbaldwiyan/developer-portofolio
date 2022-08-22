@@ -14,7 +14,7 @@ function About() {
     },
     {
       logo: <AiOutlineTwitter size={30} className='inline mb-1' />,
-      color: 'bg-primary'
+      color: 'bg-cyan-500'
     },
     {
       logo: <AiFillLinkedin size={30} className='inline mb-1' />,
@@ -23,14 +23,14 @@ function About() {
   ];
 
   return (
-    <section id='about' className='pt-22 pb-32'>
+    <section id='about' className='pt-22 pb-32 lg:pt-36'>
       <div className="container">
         <div className="flex flex-wrap">
-          <div className="w-full px-4 mb-10 lg:w-1/2">
+          <div className="w-full px-4 lg:w-1/2">
             <h4 className='font-bold text-primary text-2xl uppercase mb-4'>About Me</h4>
             <h2 className='text-black font-semibold uppercase'>Biodata</h2>
-            <h2 className='text-secondary font-medium mt-5'>
-              Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer over 2 years <br />
+            <h2 className='text-secondary font-medium mt-5 max-w-md'>
+              Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer over 2 years 
               with a demonstrated history of working in the information technology and IT services industry.
               I focused to Front End development but sometimes i also full stack
             </h2>

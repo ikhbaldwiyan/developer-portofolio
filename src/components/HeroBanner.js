@@ -19,8 +19,8 @@ function HeroBanner() {
       <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gradient">
-            <stop offset="20%" stop-color="#3b82f6" />
-            <stop offset="80%" stop-color="#06b6d4" />
+            <stop offset="20%" stop-color="#06b6d4" />
+            <stop offset="80%" stop-color="#0891b2" />
           </linearGradient>
         </defs>
         <path 
@@ -43,16 +43,16 @@ function HeroBanner() {
                 Ikhbal Dwiyantoro
               </span>
             </h1>
-            <span className="font-semibold block text-lg text-secondary mt-2">
-              Front End Developer & <span className="text-black">Blogger</span>
+            <span className="font-semibold block text-lg text-cyan-800 mt-2">
+              Front End Developer <span className="text-black"> & Blogger</span>
             </span>
-            <p className="font-medium text-secondary py-8">
+            <p className="font-medium text-secondary py-8 max-w-lg">
               Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer
               over 2 years with a demonstrated history of working in the information technology and IT services industry
             </p>
 
             <div className="mt-8">
-              <a href='#' className='text-base font-semibold text-white bg-gradient-to-r from-primary to-blue-500 py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline'>
+              <a href='#' className='text-base font-semibold text-white bg-gradient-to-r from-primary to-sky-500 py-4 px-4 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline'>
                 <MdPermContactCalendar className='mb-1 inline' size={25} /> Contact Me
               </a>
               <a href='https://github.com/ikhbaldwiyan' className='text-base font-semibold text-white bg-black py-4 px-8 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">

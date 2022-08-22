@@ -25,19 +25,19 @@ function Navbar() {
       name: 'Blog',
       pathname: '/blog',
       hash: '#',
-      icon: <MdArticle className="inline mt-1 mr-1" />
+      icon: <MdArticle size={18} className="inline mt-1 mr-1" />
     },
     {
       name: 'Projects',
       pathname: '/',
       hash: '#project',
-      icon: <FaLaptopCode className='inline mt-1 mr-1'/>
+      icon: <FaLaptopCode size={18} className='inline mt-1 mr-1'/>
     },
     {
       name: 'Contact',
       pathname: '/',
       hash: '#about',
-      icon: <MdPermContactCalendar className='inline mt-1 mr-1' />
+      icon: <MdPermContactCalendar size={18} className='inline mt-1 mr-1' />
     },
     {
       name: 'About',
@@ -76,7 +76,7 @@ function Navbar() {
   )
 
   return (
-    <header className='bg-gradient-to-l from-primary to-blue-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-xl backdrop-blur-md'>
+    <header className='bg-gradient-to-l from-primary to-sky-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-xl backdrop-blur-md'>
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-2">
