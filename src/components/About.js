@@ -20,7 +20,7 @@ function About() {
       logo: <AiFillLinkedin size={30} className='inline mb-1' />,
       color: 'bg-blue-700'
     },
-  ]
+  ];
 
   return (
     <section id='about' className='pt-22 pb-32'>

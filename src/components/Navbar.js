@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -10,23 +12,28 @@ function Navbar() {
   const menus = [
     {
       name: 'Home',
-      link: '#home'
-    },
-    {
-      name: 'Projects',
-      link: '#project'
+      pathname: '/',
+      hash: '#',
     },
     {
       name: 'Blog',
-      link: '#blog'
+      pathname: '/blog',
+      hash: '#',
+    },
+    {
+      name: 'Projects',
+      pathname: '/',
+      hash: '#project',
     },
     {
       name: 'About',
-      link: '#about'
+      pathname: '/',
+      hash: '#about',
     },
     {
       name: 'Contact',
-      link: '#about'
+      pathname: '/',
+      hash: '#about',
     },
   ]
 
@@ -35,7 +42,12 @@ function Navbar() {
       <ul className='block lg:flex'>
         {menus.map((item, idx) => (
           <li key={idx} className='group'>
-            <a href={item.link} className='font-semibold text-black py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>{item.name}</a>
+            <NavHashLink
+              to={`${item.pathname}${item.hash}`}
+              smooth
+            >
+              <a href={item.link} className='font-semibold text-black py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>{item.name}</a>
+            </NavHashLink>
           </li>
         ))}
       </ul>
@@ -56,9 +68,11 @@ function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-7">
-            <a href="#home" className='font-bold text-stone-50 block py-6 text-3xl'>
-              Developer Profile
-            </a>
+            <Link to="/">
+              <a className='font-bold text-stone-50 block py-6 text-3xl'>
+                Developer Profile
+              </a>
+            </Link>
           </div>
           <div className='flex items-center px-7'>
             <Hamburger />
