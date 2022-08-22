@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '16px',
+    },
     extend: {
       colors: {
         primary: '#06b6d4',
@@ -11,7 +15,7 @@ module.exports = {
         black: '#0f172a',
       },
       screens: {
-        '2xl': '1320px'
+        '2xl': '1320px',
       },
     },
   },

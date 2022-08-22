@@ -64,17 +64,17 @@ function Navbar() {
   )
 
   return (
-    <header className='bg-gradient-to-l from-primary to-blue-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-lg backdrop-blur-md'>
+    <header className='bg-gradient-to-l from-primary to-blue-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-xl backdrop-blur-md'>
       <div className="container">
         <div className="flex items-center justify-between relative">
-          <div className="px-7">
+          <div>
             <Link to="/">
               <a className='font-bold text-stone-50 block py-6 text-3xl'>
                 Developer Profile
               </a>
             </Link>
           </div>
-          <div className='flex items-center px-7'>
+          <div className='flex items-center'>
             <Hamburger />
             <Menu />
           </div>
