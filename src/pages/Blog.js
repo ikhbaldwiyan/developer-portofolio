@@ -58,7 +58,7 @@ function Blog() {
                     <p className='py-5 text-semibold text-secondary'>
                       {item.desc}
                     </p>
-                    <a href="#" className="py-2 px-5 bg-gradient-to-r font-semibold from-primary to-blue-500 text-white rounded-lg hover:opacity-70">
+                    <a href="#" className="py-2 px-5 bg-gradient-to-r font-semibold from-primary to-sky-500 text-white rounded-lg hover:opacity-70">
                       Read More
                     </a>
                   </div>

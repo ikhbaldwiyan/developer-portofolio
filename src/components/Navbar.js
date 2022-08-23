@@ -35,8 +35,8 @@ function Navbar() {
     },
     {
       name: 'Contact',
-      pathname: '/',
-      hash: '#about',
+      pathname: '/contact',
+      hash: '#',
       icon: <MdPermContactCalendar size={18} className='inline mt-1 mr-1' />
     },
     {
