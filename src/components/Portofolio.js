@@ -100,12 +100,12 @@ function Portofolio() {
         <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 mx-auto">
           {projects.map((item, idx) => (
             <div key={idx} className="mb-4 p-4 md:w-1/2 text-center">
-              <div className="rounded-md shadow-md overflow-hidden mt-10">
-                <img src={item.img} width="w-full" alt="The Lazy Media" />
+               <div className="rounded-lg shadow-md overflow-hidden mt-10 bg-gray-100">
+                <img src={item.img} width="w-full" alt={item.title} />
+                <h3 className="font-bold text-xl text-primary py-3 uppercase">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="font-semibold text-xl text-black py-3 uppercase">
-                {item.title}
-              </h3>
 
               {item.technology}
 

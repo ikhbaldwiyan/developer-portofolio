@@ -18,8 +18,8 @@ function HeroBanner() {
       <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gradient">
-            <stop offset="20%" stop-color="#06b6d4" />
-            <stop offset="80%" stop-color="#0891b2" />
+            <stop offset="20%" stopColor="#06b6d4" />
+            <stop offset="80%" stopColor="#0891b2" />
           </linearGradient>
         </defs>
         <path 
@@ -32,7 +32,7 @@ function HeroBanner() {
   )
 
   return (
-    <section id="home" className='pt-36 lg:pt-10 pb-14'>
+    <section id="home" className='pt-36 lg:pt-0 pb-14'>
       <div className="container lg:mt-10">
         <div className="flex flex-wrap">
           <div className="w-full self-center px-4 lg:w-1/2">
