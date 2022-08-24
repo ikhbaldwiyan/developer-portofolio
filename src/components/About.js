@@ -6,11 +6,13 @@ function About() {
   const socmed = [
     {
       logo: <AiFillGithub size={30} className='inline mb-1' />,
-      color: 'bg-black'
+      color: 'bg-black',
+      link: 'https://github.com/ikhbaldwiyan'
     },
     {
       logo: <AiOutlineInstagram size={30} className='inline mb-1' />,
-      color: 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
+      color: 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500',
+      link: 'https://www.instagram.com/ikhbal.dwiyan/'
     },
     {
       logo: <AiOutlineTwitter size={30} className='inline mb-1' />,
@@ -18,7 +20,8 @@ function About() {
     },
     {
       logo: <AiFillLinkedin size={30} className='inline mb-1' />,
-      color: 'bg-blue-700'
+      color: 'bg-blue-700',
+      link: 'https://www.linkedin.com/in/ikhbal-dwiyantoro-536693199/'
     },
   ];
 
@@ -41,7 +44,7 @@ function About() {
               <p className='font-semibold mt-7 mb-3'>Find Me on Social Media</p>
               <div className="py-5 space-x-4">
                 {socmed.map((item, idx) => (
-                  <a key={idx} href='#' className={`text-base font-semibold text-white ${item.color} py-4 px-3 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-300 ease-in-out inline`}>
+                  <a key={idx} href={item.link} className={`text-base font-semibold text-white ${item.color} py-4 px-3 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-300 ease-in-out inline`} target="_blank">
                     {item.logo}
                   </a>
                 ))}

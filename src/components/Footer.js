@@ -1,8 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { NavHashLink } from 'react-router-hash-link'
+import { AiOutlineInstagram, AiOutlineTwitter, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 function Footer() {
+  const socmed = [
+    {
+      logo: <AiFillGithub size={25} className='inline mb-1' />,
+      link: 'https://github.com/ikhbaldwiyan'
+    },
+    {
+      logo: <AiOutlineInstagram size={25} className='inline mb-1' />,
+      link: 'https://www.instagram.com/ikhbal.dwiyan/'
+    },
+    {
+      logo: <AiOutlineTwitter size={25} className='inline mb-1' />,
+      link: ''
+    },
+    {
+      logo: <AiFillLinkedin size={25} className='inline mb-1' />,
+      link: 'https://www.linkedin.com/in/ikhbal-dwiyantoro-536693199/'
+    },
+  ];
+
   return (
     <footer className="bg-gradient-to-l from-cyan-600 to-sky-900 pt-24 pb-12">
       <div className="container">
@@ -62,9 +81,11 @@ function Footer() {
                 </NavHashLink>
               </li>
               <li>
-                <a href="#" className="inline-block hover:text-white">
-                  Contact
-                </a>
+                <NavHashLink to="/contact#" >
+                  <a href="/contact#" className="inline-block hover:text-white">
+                    Contact
+                  </a>
+                </NavHashLink>
               </li>
               <li>
                 <NavHashLink smooth to="/#about" >
@@ -75,6 +96,20 @@ function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="w-full pt-22 pb-0 text-center">
+          <div className="py-5 space-x-4 px-4">
+            {socmed.map((item, idx) => (
+              <a key={idx} href={item.link} target="_blank">
+                <button href='#' className="text-base font-semibold text-white py-2 px-3 rounded-full hover:shadow-lg hover:bg-cyan-800 border transition duration-300 ease-in-out inline">
+                  {item.logo}
+                </button>
+              </a>
+            ))}
+          </div>
+          <p className="text-white">
+            Copyright © 2022 Inzoid. Built with 🎶 and <span className="text-white font-semibold">Tailwind CSS</span>.
+          </p>
         </div>
       </div>
     </footer>

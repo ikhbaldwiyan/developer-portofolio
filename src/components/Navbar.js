@@ -22,16 +22,16 @@ function Navbar() {
       icon: <AiFillHome className="inline mt-1 mr-1" />
     },
     {
-      name: 'Blog',
-      pathname: '/blog',
-      hash: '#',
-      icon: <MdArticle size={18} className="inline mt-1 mr-1" />
-    },
-    {
       name: 'Projects',
       pathname: '/',
       hash: '#project',
       icon: <FaLaptopCode size={18} className='inline mt-1 mr-1'/>
+    },
+    {
+      name: 'Blog',
+      pathname: '/blog',
+      hash: '#',
+      icon: <MdArticle size={18} className="inline mt-1 mr-1" />
     },
     {
       name: 'Contact',
@@ -80,11 +80,11 @@ function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-2">
-            <Link to="/">
+            <NavHashLink to="/#">
               <a className='font-bold text-stone-50 block py-6 text-3xl'>
                 Developer Profile
               </a>
-            </Link>
+            </NavHashLink>
           </div>
           <div className='flex items-center'>
             <Hamburger />
