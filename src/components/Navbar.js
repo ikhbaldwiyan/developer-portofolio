@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 import { AiFillHome } from 'react-icons/ai';
