@@ -9,13 +9,18 @@ import {
   FaReact,
   FaHtml5,
   FaLaravel,
-  FaPhp,
+  FaPhp
 } from "react-icons/fa";
 import { TbZoomCode } from "react-icons/tb";
 import { AiFillGithub } from "react-icons/ai";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { IoLogoNodejs } from "react-icons/io";
-import { SiMysql, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiMysql,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript
+} from "react-icons/si";
 
 function Portofolio() {
   const TechStack = () => (
@@ -117,7 +122,7 @@ function Portofolio() {
       desc: "The Lazy Media is your games, technology, entertainment, and gadgets website. I remake this website for reading some article news with diffrent UI / UX",
       link: "https://the-lazy-media.vercel.app/",
       github: "https://github.com/ikhbaldwiyan/the-lazy-media",
-      technology: <TechStack />,
+      technology: <TechStack />
     },
     {
       img: JKT,
@@ -125,20 +130,20 @@ function Portofolio() {
       desc: "Showroom is one of the largest live streaming platforms in Japan! this website is filtered streaming for JKT48 room only based by API that i made",
       link: "https://www.jkt48-showroom.com/",
       github: "https://github.com/ikhbaldwiyan/showroom",
-      technology: <TechStack />,
+      technology: <TechStack />
     },
     {
       img: SMT,
       title: "Smooth Pizza",
       desc: "Website Point of sale for management pizza restaurant, This website made at my high school last project",
       github: "https://github.com/Inzoid/smooth",
-      technology: <TechStackPHP />,
+      technology: <TechStackPHP />
     },
     {
       img: DLR,
       title: "Jack Dealer",
       desc: "Website dealer for buy or sell cars, you can buy many type of branding cars in this website",
-      technology: <TechStackPHP />,
+      technology: <TechStackPHP />
     },
     {
       img: NETFLIX,
@@ -146,26 +151,26 @@ function Portofolio() {
       desc: "Netflix is one of the largest movies stream platforms in world! i just made clone for this website to improve my frontend skill and learning about Next JS, Tailwind and Typescript",
       link: "https://netflix-clone-teal-one.vercel.app/",
       github: "https://github.com/ikhbaldwiyan/netflix-clone",
-      technology: <TechStackNext />,
-    },
+      technology: <TechStackNext />
+    }
   ];
 
   return (
     <section
       id="project"
-      className="pt-22 pb-16 bg-slate-100 rounded-xl my-10 mx-4"
+      className="pt-22 pb-16 bg-slate-100 dark:bg-gray-700 rounded-xl my-10 mx-4"
     >
       <div className="container">
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto text-center mb-15">
-            <h4 className="font-bold text-2xl text-primary py-8 uppercase">
+            <h4 className="font-bold text-2xl text-primary dark:text-cyan-500 py-8 uppercase">
               Portfolio
             </h4>
-            <h2 className="text-black font-bold text-xl lg:text-3xl mb-4 uppercase sm:text-md">
+            <h2 className="text-black dark:text-slate-200 font-bold text-xl lg:text-3xl mb-4 uppercase sm:text-md">
               <FaLaptopCode size={35} className="inline mr-2 mb-1" /> My
               Projects <FaLaptopCode size={35} className="inline ml-2 mb-1" />
             </h2>
-            <p className="font-medium text-md text-secondary">
+            <p className="font-medium text-md text-secondary dark:text-slate-300">
               Here is a list of projects I have worked on
             </p>
           </div>
@@ -174,16 +179,18 @@ function Portofolio() {
         <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 mx-auto">
           {projects.map((item, idx) => (
             <div key={idx} className="mb-4 p-4 md:w-1/2 text-center">
-              <div className="rounded-lg shadow-md overflow-hidden mt-10 bg-gray-100">
+              <div className="rounded-lg shadow-md overflow-hidden mt-10 bg-gray-100 dark:bg-bgDark">
                 <img src={item.img} width="w-full" alt={item.title} />
-                <h3 className="font-bold text-xl text-primary py-3 uppercase">
+                <h3 className="font-bold text-xl text-primary dark:text-cyan-500 py-3 uppercase">
                   {item.title}
                 </h3>
               </div>
 
               {item.technology}
 
-              <p className="text-secondary font-medium">{item.desc}</p>
+              <p className="text-secondary font-medium dark:text-textDark">
+                {item.desc}
+              </p>
 
               <div className="flex space-y-10 justify-center">
                 <a
@@ -197,7 +204,7 @@ function Portofolio() {
                 </a>
                 <a
                   href={item.github}
-                  className={`text-base font-semibold text-white bg-black py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${
+                  className={`text-base font-semibold text-white bg-slate-800 py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${
                     !item.github ? "opacity-60 cursor-not-allowed" : ""
                   }`}
                   target="_blank"

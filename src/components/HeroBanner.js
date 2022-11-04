@@ -36,17 +36,17 @@ function HeroBanner() {
       <div className="container lg:mt-10">
         <div className="flex flex-wrap">
           <div className="w-full self-center px-4 lg:w-1/2">
-            <h1 className='text-base text-1xl font-bold text-primary'>
+            <h1 className='text-base text-1xl font-bold text-primary dark:text-slate-100'>
               Hello Everyone 👋,  I am
-              <span className="block text-2xl text-black lg:text-4xl mt-2">
+              <span className="block text-2xl text-black lg:text-4xl mt-2 dark:text-slate-200">
                 Ikhbal Dwiyantoro
               </span>
             </h1>
-            <span className="font-semibold block text-lg text-cyan-800 mt-2">
-              Web Developer <span className="text-black"> & Blogger</span>
+            <span className="font-semibold block text-lg text-cyan-800 dark:text-cyan-500  mt-2">
+              Web Developer <span className="text-black dark:text-slate-300"> & Blogger</span>
             </span>
-            <p className="font-medium text-secondary py-8 max-w-lg">
-              Hi! I am Ikhbal Dwiyantoro! I've experienced as a Web Developer
+            <p className="font-medium text-secondary py-8 max-w-lg dark:text-textDark">
+              Hi! I am Ikhbal Dwiyantoro!, I've experienced as a Web Developer
               over 2 years with a demonstrated history of working in the information technology and IT services industry
             </p>
 
@@ -54,7 +54,7 @@ function HeroBanner() {
               <a href='https://www.linkedin.com/in/ikhbal-dwiyantoro-536693199/' className='text-base font-semibold text-white bg-gradient-to-r from-primary to-sky-500 py-3 px-6 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline' target="_blank">
                 <AiFillLinkedin className='mb-1 inline' size={25} /> LinkedIn 
               </a>  
-              <a href='https://github.com/ikhbaldwiyan' className='text-base font-semibold text-white bg-black py-3 px-6 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
+              <a href='https://github.com/ikhbaldwiyan' className='text-base font-semibold text-white bg-black dark:bg-slate-600 py-3 px-6 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out' target="_blank">
                 <AiFillGithub className='mb-1 inline mr-1' size={25} /> GitHub
               </a>
             </div>

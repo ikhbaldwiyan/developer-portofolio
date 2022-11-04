@@ -41,7 +41,7 @@ function BlogDetail() {
 
   const RecomendedArticle = () => (
     <div className='w-full lg:w-1/3 sticky top-20 h-max'>
-      <p className="text-lg py-4 font-semibold uppercase">
+      <p className="text-lg dark:text-textDark py-4 font-semibold uppercase">
         Recomended Articles
       </p>
       <div className="space-y-5">
@@ -61,14 +61,14 @@ function BlogDetail() {
     <Layout>
       <div className="pt-32 pb-32 px-10 lg:flex lg:space-x-6">
         <div className="w-full lg:w-2/3">
-          <h3 className='font-bold text-3xl mt-4 text-primary'> {title} </h3>
+          <h3 className='font-bold text-3xl mt-4 text-primary dark:text-cyan-600'> {title} </h3>
           <p className="text-secondary py-3 text-md">
             <FaUser className='inline mb-1 mr-1' size={14} /> Ikhbal Dwiyantoro - 
             <span className='text-cyan-900'> <FaCalendar className='inline mb-1 mx-1'/> 5 September 2022</span>
           </p>
           <div className="py-3 rounded-xl">
             <img src={`https://source.unsplash.com/720x350?${category}`} className='w-full rounded-xl mb-4 shadow-md' />
-            <p className='text-secondary'>
+            <p className='text-secondary dark:text-textDark'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ratione iste, quis, molestias quos, voluptatem atque omnis earum amet ullam nemo distinctio excepturi quibusdam beatae praesentium ad sunt nobis officiis.   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fuga incidunt, sint, quo eligendi, est labore esse quisquam adipisci expedita commodi? Rerum mollitia earum possimus quidem assumenda ullam ducimus aliquid? Nostrum, et. Dicta quaerat eius, voluptas voluptates.<br /> 
               <br />
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut rem, saepe aspernatur nesciunt odio minima enim optio? Adipisci debitis libero odit minus quia nesciunt, repudiandae voluptas exercitationem asperiores cupiditate ea.

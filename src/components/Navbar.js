@@ -5,8 +5,9 @@ import { AiFillHome } from 'react-icons/ai';
 import { BsInfoCircleFill } from 'react-icons/bs';
 import { FaLaptopCode } from 'react-icons/fa';
 import { MdArticle, MdPermContactCalendar } from 'react-icons/md';
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-function Navbar() {
+function Navbar({isDarkMode , changeTheme}) {
   const [isActive, setIsActive] = useState(false);
 
   const handleMenu = () => {
@@ -55,7 +56,7 @@ function Navbar() {
               to={`${item.pathname}${item.hash}`}
               smooth
             >
-              <a className='font-semibold text-black py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>
+              <a className='font-semibold text-black dark:text-slate-300 py-2 mx-8 flex group-hover:text-primary lg:text-white lg:group-hover:text-gray-800'>
                 {item.icon} {item.name}
               </a>
             </NavHashLink>
@@ -78,12 +79,18 @@ function Navbar() {
     <header className='bg-gradient-to-l from-primary to-sky-500 bg-opacity-80 fixed z-[99] top-0 left-0 w-full flex flex-items-center shadow-xl backdrop-blur-md'>
       <div className="container">
         <div className="flex items-center justify-between relative">
-          <div className="px-2">
+          <div className="flex justify-around px-2">
             <NavHashLink to="/#">
-              <a className='font-bold text-stone-50 block py-6 text-3xl'>
+              <a className='font-bold text-stone-50 dark:text-stone-100 block py-6 text-3xl'>
                 Developer Profile
               </a>
             </NavHashLink>
+            <DarkModeSwitch
+              style={{ marginTop: 30, marginLeft: 20 }}
+              checked={isDarkMode}
+              onChange={changeTheme}
+              size={30}
+            />
           </div>
           <div className='flex items-center'>
             <Hamburger />
