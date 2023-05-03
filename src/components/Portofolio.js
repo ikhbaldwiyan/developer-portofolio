@@ -9,9 +9,8 @@ import {
   FaReact,
   FaHtml5,
   FaLaravel,
-  FaPhp
+  FaPhp,
 } from "react-icons/fa";
-import { TbZoomCode } from "react-icons/tb";
 import { AiFillGithub } from "react-icons/ai";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { IoLogoNodejs } from "react-icons/io";
@@ -19,8 +18,10 @@ import {
   SiMysql,
   SiNextdotjs,
   SiTailwindcss,
-  SiTypescript
+  SiTypescript,
 } from "react-icons/si";
+import { RiGlobalLine } from "react-icons/ri";
+import { ModalDetail } from "./ModalDetail";
 
 function Portofolio() {
   const TechStack = () => (
@@ -122,28 +123,57 @@ function Portofolio() {
       desc: "The Lazy Media is your games, technology, entertainment, and gadgets website. I remake this website for reading some article news with diffrent UI / UX",
       link: "https://the-lazy-media.vercel.app/",
       github: "https://github.com/ikhbaldwiyan/the-lazy-media",
-      technology: <TechStack />
+      technology: <TechStack />,
+      detail: (
+        <>
+          <p>- React JS</p>
+          <p>- Node JS</p>
+          <p>- Reactstrap</p>
+        </>
+      ),
     },
     {
       img: JKT,
       title: "JKT48 SHOWROOM",
       desc: "Showroom is one of the largest live streaming platforms in Japan! this website is filtered streaming for JKT48 room only based by API that i made",
-      link: "https://www.jkt48-showroom.com/",
+      link: "https://jkt48-showroom.vercel.app/",
       github: "https://github.com/ikhbaldwiyan/showroom",
-      technology: <TechStack />
+      technology: <TechStack />,
+      detail: (
+        <>
+          <p>- React JS</p>
+          <p>- Express JS</p>
+          <p>- Laravel</p>
+          <p>- Reactstrap</p>
+        </>
+      ),
     },
     {
       img: SMT,
       title: "Smooth Pizza",
       desc: "Website Point of sale for management pizza restaurant, This website made at my high school last project",
       github: "https://github.com/Inzoid/smooth",
-      technology: <TechStackPHP />
+      technology: <TechStackPHP />,
+      detail: (
+        <>
+          <p>- PHP</p>
+          <p>- Bootstrap</p>
+          <p>- JQuery</p>
+        </>
+      ),
     },
     {
       img: DLR,
       title: "Jack Dealer",
       desc: "Website dealer for buy or sell cars, you can buy many type of branding cars in this website",
-      technology: <TechStackPHP />
+      technology: <TechStackPHP />,
+      detail: (
+        <>
+          <p>- PHP</p>
+          <p>- Bootstrap</p>
+          <p>- JQuery</p>
+        </>
+      ),
     },
     {
       img: NETFLIX,
@@ -151,8 +181,15 @@ function Portofolio() {
       desc: "Netflix is one of the largest movies stream platforms in world! i just made clone for this website to improve my frontend skill and learning about Next JS, Tailwind and Typescript",
       link: "https://netflix-clone-teal-one.vercel.app/",
       github: "https://github.com/ikhbaldwiyan/netflix-clone",
-      technology: <TechStackNext />
-    }
+      technology: <TechStackNext />,
+      detail: (
+        <>
+          <p>- Next JS</p>
+          <p>- Tailwind CSS</p>
+          <p>- Typescript</p>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -199,15 +236,22 @@ function Portofolio() {
                     !item.link ? "opacity-60 cursor-not-allowed" : ""
                   } `}
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <TbZoomCode className="mb-1 inline" size={25} /> Website
+                  <RiGlobalLine className="mb-1 inline" size={25} /> Website
                 </a>
+                <button
+                  className={`text-base font-semibold text-white bg-gradient-to-r from-teal-500 to-sky-500  py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out mr-5 inline mt-10`}
+                >
+                  <ModalDetail data={item} />
+                </button>
                 <a
                   href={item.github}
                   className={`text-base font-semibold text-white bg-slate-800 py-3 px-5 rounded-xl hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out inline ${
                     !item.github ? "opacity-60 cursor-not-allowed" : ""
                   }`}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <AiFillGithub className="mb-1 inline mr-1" size={25} /> GitHub
                 </a>
